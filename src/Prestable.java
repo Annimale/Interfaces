@@ -7,6 +7,10 @@
  *
  * @author ivamar
  */
-public interface Biblioteca {
+public interface Prestable {
+    
+   public String prestar();
+   public boolean prestado();
+   public String devolver();
     
 }

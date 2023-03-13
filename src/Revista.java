@@ -7,15 +7,16 @@
  *
  * @author ivamar
  */
-public class Bibliotek {
-    protected  String codigo;
-    protected String titulo;
-    protected int anopub;
+public class Revista  extends Publicacion{
+    protected int numero;
 
-    public Bibliotek(String codigo, String titulo, int anopub) {
-        this.codigo = codigo;
-        this.titulo = titulo;
-        this.anopub = anopub;
+    public Revista(int numero, String codigo, String titulo, int anopub) {
+        super(codigo, titulo, anopub);
+        this.numero = numero;
+    }
+
+    public int getNumero() {
+        return numero;
     }
 
     public String getCodigo() {
@@ -28,6 +29,10 @@ public class Bibliotek {
 
     public int getAnopub() {
         return anopub;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
     public void setCodigo(String codigo) {
@@ -44,7 +49,7 @@ public class Bibliotek {
 
     @Override
     public String toString() {
-        return "Bibliotek: " + "codigo=" + codigo + ", titulo=" + titulo + ", anopub=" + anopub ;
+        return super.toString() +"Revista: " + "numero=" + numero +"\n";
     }
     
     

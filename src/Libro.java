@@ -7,17 +7,15 @@
  *
  * @author ivamar
  */
-public class Libro extends Bibliotek{
+public class Libro extends Publicacion implements Prestable{
     protected boolean prestado;
 
-    public Libro(boolean prestado, String codigo, String titulo, int anopub) {
+    public Libro(String codigo, String titulo, int anopub) {
         super(codigo, titulo, anopub);
         this.prestado = false;
     }
 
-    public boolean isPrestado() {
-        return prestado;
-    }
+    
 
     public String getCodigo() {
         return codigo;
@@ -49,10 +47,25 @@ public class Libro extends Bibliotek{
 
     @Override
     public String toString() {
-        return "Libro: " + "prestado=" + prestado ;
+        return super.toString()+ "Libro: " + "prestado=" + prestado +"\n";
     }
     
     
+    public String devCodigo(){
+        return this.codigo;
+    }
     
-    
+    public int devAnopub(){
+        return this.anopub;
+    }
+     
+   public String prestar(){
+       return "Prestado";
+   }
+   public boolean prestado(){
+       return this.prestado;
+   }
+   public String devolver(){
+       return "El libro ha sido devuelto";
+   }
 }
