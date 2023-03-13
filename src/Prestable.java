@@ -9,8 +9,8 @@
  */
 public interface Prestable {
     
-   public String prestar();
+   public boolean prestar();
    public boolean prestado();
-   public String devolver();
+   public boolean devolver();
     
 }

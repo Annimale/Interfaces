@@ -59,13 +59,13 @@ public class Libro extends Publicacion implements Prestable{
         return this.anopub;
     }
      
-   public String prestar(){
-       return "Prestado";
+   public boolean prestar(){
+       return this.prestado=true;
    }
    public boolean prestado(){
        return this.prestado;
    }
-   public String devolver(){
-       return "El libro ha sido devuelto";
+   public boolean devolver(){
+       return this.prestado=false;
    }
 }

@@ -54,7 +54,7 @@ public class App {
         lista.add(r1);
         lista.add(r2);
 
-        l1.setPrestado(true);
+        l1.prestar();
 
         System.out.println(lista.toString());
         System.out.println("\n");
